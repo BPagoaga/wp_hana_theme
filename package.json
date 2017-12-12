@@ -1,6 +1,10 @@
 {
   "name": "hana_styleguide",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BPagoaga/wp_hana_theme.git"
+  },
   "description": "Styleguide for Häna",
   "main": "app.js",
   "scripts": {
@@ -8,6 +12,10 @@
     "prod": "webpack",
     "fix": "eslint 'src/assets/js/*.js' --fix"
   },
+  "bugs": {
+    "url": "https://github.com/BPagoaga/wp_hana_theme/issues"
+  },
+  "homepage": "https://github.com/BPagoaga/wp_hana_theme#readme",
   "author": "Bernard Pagoaga bernard.pagoaga@gmail.com",
   "license": "ISC",
   "devDependencies": {
