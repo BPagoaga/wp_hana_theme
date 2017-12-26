@@ -39,6 +39,18 @@ function my_site_WI_dequeue_script() {
 }
  
 // add_action( 'wp_print_scripts', 'my_site_WI_dequeue_script', 100 );
+// 
+/**
+ * Dequeue the Bootstrap CSS.
+ *
+ * Hooked to the wp_print_scripts action, with a late priority (100),
+ * so that it is after the script was enqueued.
+**/
+function wp_dequeue_styles() {
+   wp_dequeue_style( 'bootstrap' );
+   wp_dequeue_style( 'bootstrap-css' );
+}
+add_action( 'wp_print_styles', 'wp_dequeue_styles', 100);
 
 // register menus
 function register_my_menus() {

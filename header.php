@@ -58,9 +58,14 @@
                     <i class="material-icons">account_circle</i>
                 </a>
                 <figure class="hide-on-med-and-down">
-                    <img src="dist/logo.gif" alt="Logo Häna Handmade Création Artisanale pour bébés">
+                    <?php the_custom_logo(); ?>
                 </figure>
-                <h1>Häna, vêtements pour bébés</h1>
+                <?php if ( is_front_page() ) : ?>
+                    <h1 class="site-title"><a href="<?= esc_url( home_url( '/' ) ) ?>" title="<?= esc_attr( get_bloginfo( 'name', 'display' ) ) ?>" rel="home"><?= get_bloginfo( 'name' ) ?></a></h1>
+                <?php else : ?>
+                    <p class="site-title"><a href="<?= esc_url( home_url( '/' ) ) ?>" title="<?= esc_attr( get_bloginfo( 'name', 'display' ) ) ?>" rel="home"><?= get_bloginfo( 'name' ) ?></a></p>
+                <?php endif; ?>
+                <!-- <h1>Häna, vêtements pour bébés</h1> -->
                 <!-- secondary desktop menu -->
                 <?php include 'inc/structure/nav/_secondary_desktop.php'; ?>
               </div>
@@ -74,7 +79,7 @@
         <!-- secondary mobile -->
         <?php include 'inc/structure/nav/_secondary_mobile.php'; ?>
         <div class="container">
-            <img src="dist/banniere-Hana-test-2.png" class="responsive-img">
+            <img src="<?= get_stylesheet_directory_uri() . '/dist/banniere-Hana-test-2.png' ?>" class="responsive-img">
             <!-- Navigation principale -->
             <?php include 'inc/structure/nav/_primary_desktop.php'; ?>
         </div>
