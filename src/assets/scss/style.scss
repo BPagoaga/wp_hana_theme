@@ -116,5 +116,12 @@ select {
         width: 70%;
         margin: 0 auto;
     }
+
+    #nav-desktop {
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 
