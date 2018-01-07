@@ -1,5 +1,9 @@
 import { logo, banner } from "./images";
+import { nav } from "./nav";
 const $ = jQuery;
+
+// navigation
+nav.init();
 
 // Mobile scripts
 if (window.innerWidth <= 768) {

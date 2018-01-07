@@ -82,6 +82,7 @@
             <img src="<?= get_stylesheet_directory_uri() . '/dist/banniere-Hana-test-2.png' ?>" class="responsive-img">
             <!-- Navigation principale -->
             <?php include 'inc/structure/nav/_primary_desktop.php'; ?>
+            
         </div>
 
     </header>

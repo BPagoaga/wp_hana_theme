@@ -7,11 +7,19 @@
     font-style: normal;
 }
 
-html {
-    font-size: 100%;
+:root {
+    --main-bg-color: #faebda;
+    --nav-bg-color: #f45520;
 }
 
-h1 {
+html,
+body {
+    font-size: 100%;
+    background-color: var(--main-bg-color);
+}
+
+h1,
+.site-title {
     font-family: "hitch_hikeregular";
     font-size: 1.8em;
     flex: 1;
@@ -21,6 +29,10 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.hidden {
+    display: none !important;
 }
 
 /* Define secondary font */
@@ -45,6 +57,30 @@ select {
     display: grid;
     align-items: center;
     justify-content: center;
+}
+
+nav {
+    background-color: var(--nav-bg-color);
+}
+
+//
+// Sous Menu
+//
+.sous-menu {
+    list-style: none;
+    display: flex;
+    height: auto;
+    background-color: var(--main-bg-color);
+
+    .widget ul li {
+        a {
+            color: var(--nav-bg-color);
+        }
+
+        &::before {
+            content: none;
+        }
+    }
 }
 
 @media screen and (min-width: 385px) {
@@ -124,4 +160,3 @@ select {
         }
     }
 }
-

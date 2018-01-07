@@ -6,4 +6,5 @@ wp_nav_menu(
         'menu_class'     => 'tabs component',
     )
 );
+include '_menu_categories.php'; ?>
 
