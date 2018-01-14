@@ -9,7 +9,7 @@
 
 :root {
     --main-bg-color: #faebda;
-    --nav-bg-color: #f45520;
+    --component-bg-color: #f45520;
 }
 
 html,
@@ -19,10 +19,19 @@ body {
 }
 
 h1,
-.site-title {
+.site-title,
+.copyright {
     font-family: "hitch_hikeregular";
-    font-size: 1.8em;
     flex: 1;
+}
+
+h1,
+.site-title {
+    font-size: 1.8em;
+}
+
+.copyright {
+    font-size: 1.5em;
 }
 
 .flex-container {
@@ -46,21 +55,9 @@ select {
     display: block;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 10px;
-}
-
-.cell {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-nav {
-    background-color: var(--nav-bg-color);
+nav,
+.page-footer {
+    background-color: var(--component-bg-color);
 }
 
 //
@@ -74,7 +71,7 @@ nav {
 
     .widget ul li {
         a {
-            color: var(--nav-bg-color);
+            color: var(--component-bg-color);
         }
 
         &::before {
@@ -83,21 +80,36 @@ nav {
     }
 }
 
-@media screen and (min-width: 385px) {
-    .wrapper {
-        grid-template-columns: repeat(2, 1fr);
+/**
+ *   FOOTER
+ **/
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-sidebar-wrap {
+    padding: 10px 0;
+}
+
+.page-footer {
+    a {
+        color: var(--main-bg-color);
+        font-size: 0.9em;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
 
-@media screen and (min-width: 768px) {
-    .wrapper {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+// @TODO : grid template
 
 /**
-*   OVERRIDE MATERIALIZE
-**/
+ *   OVERRIDE MATERIALIZE
+ **/
 /* .center, .center-align {
     text-align: center;
     justify-content: center;
@@ -130,6 +142,42 @@ nav {
 
 .hide-on-scroll.hidden .flex-container {
     opacity: 0;
+}
+
+.page-footer {
+    padding: 0;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    opacity: 1;
+}
+
+.tabs .tab a {
+    color: var(--component-bg-color);
+    opacity: 0.8;
+}
+
+/**
+ *   OVERRIDE SHOP ISLE
+ **/
+.font-alt {
+    text-transform: capitalize;
+}
+
+
+.widget ul li::before {
+    content: none;
+}
+
+.footer-social-links {
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .widget {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 769px) {
