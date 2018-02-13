@@ -24,21 +24,21 @@ if ( ! function_exists( 'shop_isle_footer_widgets' ) ) {
                 <div class="row">
 
                     <?php if ( is_active_sidebar( 'sidebar-footer-area-1' ) ) : ?>
-                        <div class="col-sm-6 col-md-3 footer-sidebar-wrap">
+                        <div class="col s6 m3 footer-sidebar-wrap">
                             <?php dynamic_sidebar( 'sidebar-footer-area-1' ); ?>
                         </div>
                     <?php endif; ?>
                     <!-- Widgets end -->
 
                     <?php if ( is_active_sidebar( 'sidebar-footer-area-2' ) ) : ?>
-                        <div class="col-sm-6 col-md-3 footer-sidebar-wrap">
+                        <div class="col s6 m3 footer-sidebar-wrap">
                             <?php dynamic_sidebar( 'sidebar-footer-area-2' ); ?>
                         </div>
                     <?php endif; ?>
                     <!-- Widgets end -->
 
                     <?php if ( is_active_sidebar( 'sidebar-footer-area-3' ) ) : ?>
-                        <div class="col-sm-6 col-md-3 footer-sidebar-wrap">
+                        <div class="col s6 m3 footer-sidebar-wrap">
                             <?php dynamic_sidebar( 'sidebar-footer-area-3' ); ?>
                         </div>
                     <?php endif; ?>
@@ -46,7 +46,7 @@ if ( ! function_exists( 'shop_isle_footer_widgets' ) ) {
 
 
                     <?php if ( is_active_sidebar( 'sidebar-footer-area-4' ) ) : ?>
-                        <div class="col-sm-6 col-md-3 footer-sidebar-wrap">
+                        <div class="col s6 m3 footer-sidebar-wrap">
                             <?php dynamic_sidebar( 'sidebar-footer-area-4' ); ?>
                         </div>
                     <?php endif; ?>
@@ -84,7 +84,7 @@ if ( ! function_exists( 'shop_isle_footer_copyright_and_socials' ) ) {
                     <?php
                     /* Copyright */
                     $shop_isle_copyright = apply_filters( 'shop_isle_footer_copyright_filter', get_theme_mod( 'shop_isle_copyright' ) );
-                    echo '<div class="col-sm-6 footer-copyright">';
+                    echo '<div class="col s6 footer-copyright">';
                     if ( ! empty( $shop_isle_copyright ) ) :
                         echo '<p class="copyright font-alt">' . $shop_isle_copyright . '</p>';
                         endif;
@@ -105,7 +105,7 @@ if ( ! function_exists( 'shop_isle_footer_copyright_and_socials' ) ) {
 
                         if ( ! empty( $shop_isle_socials_decoded ) ) :
 
-                            echo '<div class="col-sm-6">';
+                            echo '<div class="col s6">';
 
                                 echo '<div class="footer-social-links">';
 

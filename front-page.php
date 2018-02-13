@@ -11,8 +11,8 @@ get_header();
 /* Wrapper start */
 
 echo '<div class="main toto">';
-$big_title = get_template_directory() . '/inc/sections/shop_isle_big_title_section.php';
-load_template( apply_filters( 'shop-isle-subheader', $big_title ) );
+$big_title = get_stylesheet_directory() . '/inc/sections/shop_isle_big_title_section.php';
+//load_template( apply_filters( 'shop-isle-subheader', $big_title ) );
 
 /* Wrapper start */
 $shop_isle_bg = get_theme_mod( 'background_color' );
@@ -37,19 +37,19 @@ if ( defined( 'WCCM_VERISON' ) ) {
 }
 
 /******  Banners Section */
-$banners_section = get_template_directory() . '/inc/sections/shop_isle_banners_section.php';
+$banners_section = get_stylesheet_directory() . '/inc/sections/shop_isle_banners_section.php';
 require_once( $banners_section );
 
 /******* Products Section */
-$latest_products = get_template_directory() . '/inc/sections/shop_isle_products_section.php';
+$latest_products = get_stylesheet_directory() . '/inc/sections/shop_isle_products_section.php';
 require_once( $latest_products );
 
 /******* Video Section */
-$video = get_template_directory() . '/inc/sections/shop_isle_video_section.php';
+$video = get_stylesheet_directory() . '/inc/sections/shop_isle_video_section.php';
 require_once( $video );
 
 /******* Products Slider Section */
-$products_slider = get_template_directory() . '/inc/sections/shop_isle_products_slider_section.php';
+$products_slider = get_stylesheet_directory() . '/inc/sections/shop_isle_products_slider_section.php';
 require_once( $products_slider );
 
 
