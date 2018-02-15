@@ -101,9 +101,18 @@ elseif ( isset( $shop_isle_products_category ) && ! empty( $shop_isle_products_c
 
 			$shop_isle_latest_loop->the_post();
 			global $product;
-			echo '<div class="col s6 m3 l3">';
-			echo '<div class="shop-item">';
-			echo '<div class="shop-item-image">';
+			echo '<div class="col s6 m3 l3">'; ?>
+			<div class="card">
+			<div class="card-image">
+			<!-- bind method add to cart to this link -->
+			<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+			</div>
+			<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+			</div>
+		</div>
+			<?php
+			// echo '<div class="shop-item">';
+			// echo '<div class="shop-item-image">';
 
 			$shop_isle_gallery_attachment_ids = false;
 			if ( function_exists( 'method_exists' ) && method_exists( $product, 'get_gallery_image_ids' ) ) {
@@ -135,7 +144,7 @@ elseif ( isset( $shop_isle_products_category ) && ! empty( $shop_isle_products_c
 				endif;
 			endif;
 
-			echo '<div class="shop-item-detail">';
+			echo '<div class="shop-item-detail card-content">';
 			if ( ! empty( $product ) ) :
 				echo do_shortcode( '[add_to_cart id="' . $shop_isle_latest_loop->post->ID . '"]' );
 				if ( function_exists( 'wccm_add_button' ) ) {
@@ -147,9 +156,9 @@ elseif ( isset( $shop_isle_products_category ) && ! empty( $shop_isle_products_c
 
 				}
 			endif;
+			echo '<h4 class="shop-item-title font-alt card-title"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h4>';
 			echo '</div>';
 			echo '</div>';
-			echo '<h4 class="shop-item-title font-alt"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h4>';
 			$rating_html = '';
 			if ( function_exists( 'method_exists' ) && ( function_exists( 'wc_get_rating_html' ) ) && method_exists( $product, 'get_average_rating' ) ) {
 				$shop_isle_avg = $product->get_average_rating();
@@ -228,8 +237,8 @@ else :
 			global $product;
 
 			echo '<div class="col s6 m3 l3">';
-			echo '<div class="shop-item">';
-			echo '<div class="shop-item-image">';
+			echo '<div class="card">';
+			echo '<div class="card-image">';
 
 			$shop_isle_gallery_attachment_ids = false;
 			if ( function_exists( 'method_exists' ) && method_exists( $product, 'get_gallery_image_ids' ) ) {
@@ -257,11 +266,15 @@ else :
 
 			else :
 				if ( function_exists( 'wc_placeholder_img_src' ) ) :
-					echo '<img src="' . esc_url( wc_placeholder_img_src() ) . '" alt="Placeholder" width="65px" height="115px" />';
+					echo '<img src="' . esc_url( wc_placeholder_img_src() ) . '" alt="Placeholder"/>';
 				endif;
 			endif;
+			echo '<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>';
+			// end card-image
+			echo '</div>';
 
-			echo '<div class="shop-item-detail">';
+			echo '<div class="card-content">';
+			echo '<h4 class="card-title"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h4>';
 			if ( ! empty( $product ) ) :
 				echo do_shortcode( '[add_to_cart id="' . $shop_isle_latest_loop->post->ID . '"]' );
 				if ( function_exists( 'wccm_add_button' ) ) {
@@ -279,8 +292,6 @@ else :
 				}
 			endif;
 			echo '</div>';
-			echo '</div>';
-			echo '<h4 class="shop-item-title font-alt"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h4>';
 			$rating_html = '';
 			if ( function_exists( 'method_exists' ) && ( function_exists( 'wc_get_rating_html' ) ) && method_exists( $product, 'get_average_rating' ) ) {
 				$shop_isle_avg = $product->get_average_rating();
