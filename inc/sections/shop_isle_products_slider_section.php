@@ -112,7 +112,7 @@ if ( ! empty( $shop_isle_products_slider_category ) && ( $shop_isle_products_sli
 			$shop_isle_products_slider_loop->the_post();
 			global $product;
 			echo '<div class="owl-item">';
-			echo '<div class="col s12">';
+			echo '<div class="col s6">';
 			echo '<div class="ex-product">';
 			if ( function_exists( 'woocommerce_get_product_thumbnail' ) ) :
 				echo '<a href="' . esc_url( get_permalink() ) . '">' . woocommerce_get_product_thumbnail() . '</a>';
@@ -184,7 +184,7 @@ else :
 			$shop_isle_products_slider_loop->the_post();
 			global $product;
 			echo '<div class="owl-item">';
-			echo '<div class="col s12">';
+			echo '<div class="col s6">';
 			echo '<div class="ex-product">';
 			if ( function_exists( 'woocommerce_get_product_thumbnail' ) ) :
 				echo '<a href="' . esc_url( get_permalink() ) . '">' . woocommerce_get_product_thumbnail() . '</a>';

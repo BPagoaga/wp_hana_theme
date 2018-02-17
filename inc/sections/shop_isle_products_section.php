@@ -105,7 +105,7 @@ elseif ( isset( $shop_isle_products_category ) && ! empty( $shop_isle_products_c
 			<div class="card">
 			<div class="card-image">
 			<!-- bind method add to cart to this link -->
-			<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+			<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
 			</div>
 			<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
 			</div>
@@ -269,7 +269,7 @@ else :
 					echo '<img src="' . esc_url( wc_placeholder_img_src() ) . '" alt="Placeholder"/>';
 				endif;
 			endif;
-			echo '<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>';
+			echo '<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>';
 			// end card-image
 			echo '</div>';
 
