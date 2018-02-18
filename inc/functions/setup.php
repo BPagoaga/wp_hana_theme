@@ -624,7 +624,7 @@ function shop_isle_php_style() {
 		echo '
 			.navbar-custom,
 			.header-shopping-cart,
-			.navbar-custom .sub-menu, 
+			.navbar-custom .sub-menu,
 			.navbar-custom .children,
 			.onsale,
 		    .header-search-input{
@@ -645,7 +645,7 @@ function shop_isle_php_style() {
 			.widget .widget-title,
 			 .post-title a,
 			 .single-product .product_title,
-			 .related.products h2, 
+			 .related.products h2,
 			 .upsells.products h2 {
 				color: ' . $shop_isle_c2 . ';
 			}
@@ -666,13 +666,13 @@ function shop_isle_php_style() {
 
 		/* Color 4 */
 		echo '
-			.product .product-button-wrap .add_to_cart_button, 
-			ul.products li.product .product-button-wrap .button.product_type_simple, 
+			.product .product-button-wrap .add_to_cart_button,
+			ul.products li.product .product-button-wrap .button.product_type_simple,
 			.shop-item .product-button-wrap .add_to_cart_button,
 			.btn.btn-b,
-			#comments input[type="submit"], 
+			#comments input[type="submit"],
 			button[type="submit"],
-			#comments input[type="submit"]:hover, 
+			#comments input[type="submit"]:hover,
 			button[type="submit"]:hover,
 			#payment .place-order .button,
 			table.cart td.actions input[name="update_cart"],
@@ -681,9 +681,9 @@ function shop_isle_php_style() {
 		    .header-shopping-cart .widget_shopping_cart p.buttons a,
 		    .shop-item .product-button-wrap .product_type_simple,
 		    ul.products li.product .product-button-wrap .product_type_variable,
-	        ul.products li.product .product-button-wrap .button.product_type_grouped, 
-	        .shop-item .product-button-wrap .button.product_type_grouped, 
-	        .shop-item .product-button-wrap .button.product_type_variable, 
+	        ul.products li.product .product-button-wrap .button.product_type_grouped,
+	        .shop-item .product-button-wrap .button.product_type_grouped,
+	        .shop-item .product-button-wrap .button.product_type_variable,
 	        ul.products li.product .product-button-wrap .product_type_variable,
 	        .widget input[type=submit],
 			.widget button[type=submit],
@@ -691,18 +691,18 @@ function shop_isle_php_style() {
 			.widget_price_filter .ui-slider .ui-slider-handle {
 				background: ' . $shop_isle_c4 . ';
 			}
-			.product .product-button-wrap .add_to_cart_button:hover, 
-			ul.products li.product .product-button-wrap .button.product_type_simple:hover, 
+			.product .product-button-wrap .add_to_cart_button:hover,
+			ul.products li.product .product-button-wrap .button.product_type_simple:hover,
 			.shop-item .product-button-wrap .add_to_cart_button:hover,
 			.btn.btn-b:hover,
 		    .header-shopping-cart .widget_shopping_cart p.buttons a:hover,
 		    ul.products li.product .product-button-wrap .product_type_variable:hover.
-            ul.products li.product .product-button-wrap .button.product_type_grouped:hover, 
-	        .shop-item .product-button-wrap .button.product_type_grouped:hover, 
+            ul.products li.product .product-button-wrap .button.product_type_grouped:hover,
+	        .shop-item .product-button-wrap .button.product_type_grouped:hover,
 	        .shop-item .product-button-wrap .button.product_type_variable:hover,
 	        .widget input[type=submit]:hover,
 			.widget button[type=submit]:hover,
-			.widget_shopping_cart_content .buttons a:hover, 
+			.widget_shopping_cart_content .buttons a:hover,
 			.widget.woocommerce.widget_shopping_cart_content .button a:hover {
 			    background: ' . $shop_isle_c4 . ';
 			    opacity: 0.8;
@@ -710,12 +710,12 @@ function shop_isle_php_style() {
 			a:hover {
 				color: ' . $shop_isle_c4 . ';
 			}
-			#comments input[type="submit"]:hover, 
+			#comments input[type="submit"]:hover,
 			button[type="submit"]:hover {
 				opacity: 0.8;
 			}
 			.single-product div.product form.cart .button:hover,
-			#payment .place-order .button:hover, 
+			#payment .place-order .button:hover,
 			#payment .place-order .button:focus,
 			.wc-proceed-to-checkout .button.checkout-button:hover,
 			table.cart td.actions input[name="update_cart"]:hover {
@@ -753,7 +753,7 @@ function shop_isle_php_style() {
 			footer.footer .divider-d {
 				border-top: 1px solid rgba(32, 32, 32, 0.5);
 			}
-			.navbar-custom .sub-menu > li > a, 
+			.navbar-custom .sub-menu > li > a,
 			.navbar-custom .children > li > a,
 			 .header-shopping-cart .mini_cart_item a {
 				color: rgba(255, 255, 255, .7);
@@ -831,7 +831,7 @@ function shop_isle_pro_function_for_mega_menu() {
 		    ' . $bg_dropdown . ' !important;
 		    color: #fff !important;
 		}
-		
+
 		@media (max-width: 767px) {
 			.navbar-fixed-top .navbar-collapse {
 				' . $bg_dropdown . ' !important;

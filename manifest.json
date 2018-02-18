@@ -1,0 +1,9 @@
+{
+  "name": "Häna Handmade",
+  "short_name": "Häna Handmade",
+  "icons": ["dist/logo.gif"],
+  "display": "standalone",
+  "background_color": "#faebda",
+  "theme_color": "#f45520",
+  "plateform": "web"
+}

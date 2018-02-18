@@ -7,16 +7,16 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-<?php if ( is_singular() && pings_open( get_queried_object() ) ) { ?>
+    <?php if ( is_singular() && pings_open( get_queried_object() ) ) { ?>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php } ?>
+    <?php } ?>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link rel="manifest" href="/manifest.json">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -71,7 +71,7 @@
               </div>
               <div class="nav-content hide-on-large-only">
                     <!-- primary mobile menu -->
-                    <?php include 'inc/structure/nav/_primary_mobile.php'; ?>               
+                    <?php include 'inc/structure/nav/_primary_mobile.php'; ?>
                 </div>
             </nav>
         </div>
@@ -82,7 +82,7 @@
             <img src="<?= get_stylesheet_directory_uri() . '/dist/banniere-Hana-test-2.png' ?>" class="responsive-img">
             <!-- Navigation principale -->
             <?php include 'inc/structure/nav/_primary_desktop.php'; ?>
-            
+
         </div>
 
     </header>
