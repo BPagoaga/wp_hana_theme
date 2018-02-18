@@ -1,9 +1,21 @@
 {
   "name": "Häna Handmade",
   "short_name": "Häna Handmade",
-  "icons": ["dist/logo.gif"],
+  "start_url": ".",
+  "description": "Häna Handmade, couture",
+  "icons": [
+    {
+      "src": "wp-content/themes/shop-isle-child/dist/log.gif",
+      "type": "image/gif",
+      "sizes": "128x128"
+    }
+  ],
   "display": "standalone",
   "background_color": "#faebda",
   "theme_color": "#f45520",
-  "plateform": "web"
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ]
 }
