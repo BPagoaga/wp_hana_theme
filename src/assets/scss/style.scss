@@ -158,6 +158,10 @@ nav,
   }
 
   #nav-desktop {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+
     a {
       display: flex;
       align-items: center;
@@ -168,6 +172,11 @@ nav,
     &:first-child {
       order: 1;
     }
+  }
+
+  .nav-wrapper {
+    display: flex;
+
   }
 }
 
