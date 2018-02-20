@@ -71,6 +71,7 @@ nav,
   display: flex;
   height: auto;
   background-color: var(--main-bg-color);
+  transition: all ease-in-out 0.5s;
 
   .widget ul li {
     a {
@@ -221,6 +222,19 @@ nav,
   opacity: 0.8;
 }
 
+nav {
+  ul {
+    a {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: var(--main-bg-color);
+        color: var(--component-bg-color);
+      }
+    }
+  }
+}
+
 /**
    * END OVERRIDE MATERIALIZE
    **/
@@ -244,8 +258,12 @@ nav,
   padding: 0;
 }
 
+/* Ne pas afficher l'image en background
+des titres */
 .bg-dark {
-  background-color: transparent;
+  background: none !important;
+  // les variables css ne sont pas prises en compte ici !
+  background-color: #faebda !important;
 }
 
 .module-small {

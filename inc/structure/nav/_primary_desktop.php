@@ -11,5 +11,5 @@
             );
             ?>
     </div>
-    <?php include '_menu_categories.php'; ?>
 </nav>
+<?php include '_menu_categories.php'; ?>

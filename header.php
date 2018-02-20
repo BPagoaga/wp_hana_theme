@@ -65,7 +65,6 @@
                 <?php else : ?>
                     <p class="site-title"><a href="<?= esc_url( home_url( '/' ) ) ?>" title="<?= esc_attr( get_bloginfo( 'name', 'display' ) ) ?>" rel="home"><?= get_bloginfo( 'name' ) ?></a></p>
                 <?php endif; ?>
-                <!-- <h1>Häna, vêtements pour bébés</h1> -->
                 <!-- secondary desktop menu -->
                 <?php include 'inc/structure/nav/_secondary_desktop.php'; ?>
               </div>
