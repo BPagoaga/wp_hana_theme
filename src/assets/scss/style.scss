@@ -10,6 +10,7 @@
 :root {
   --main-bg-color: #faebda;
   --component-bg-color: #f45520;
+  --materialize-color: #111;
 }
 
 html,
@@ -176,7 +177,6 @@ nav,
 
   .nav-wrapper {
     display: flex;
-
   }
 }
 
@@ -265,6 +265,14 @@ nav {
 
 .page-header-module.module {
   padding: 0;
+
+  &::before {
+    background-color: transparent;
+  }
+
+  .module-title {
+    color: var(--materialize-color);
+  }
 }
 
 /* Ne pas afficher l'image en background
