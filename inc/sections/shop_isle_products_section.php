@@ -101,8 +101,8 @@ elseif ( isset( $shop_isle_products_category ) && ! empty( $shop_isle_products_c
 
 			$shop_isle_latest_loop->the_post();
 			global $product;
-			echo '<div class="col s6 m3 l3">'; ?>
-			<div class="card">
+			echo '<div class="col s12 m6 l4 xl3">'; ?>
+			<div class="card product_catalog">
 			<div class="card-image">
 			<!-- bind method add to cart to this link -->
 			<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
@@ -236,8 +236,8 @@ else :
 			$shop_isle_latest_loop->the_post();
 			global $product;
 
-			echo '<div class="col s6 m3 l3">';
-			echo '<div class="card">';
+			echo '<div class="col s12 m6 l4 xl3">';
+			echo '<div class="card product_front_page">';
 			echo '<div class="card-image">';
 
 			$shop_isle_gallery_attachment_ids = false;
@@ -336,9 +336,9 @@ else :
 		echo '<div class="row mt-30">';
 		echo '<div class="col s12 center-align">';
 		if ( function_exists( 'wc_get_page_id' ) ) {
-			echo '<a href="' . esc_url( get_permalink( wc_get_page_id( 'shop' ) ) ) . '" class="btn btn-b btn-round">' . apply_filters( 'shop_isle_see_all_products_label', __( 'See all products', 'shop-isle' ) ) . '</a>';
+			echo '<a href="' . esc_url( get_permalink( wc_get_page_id( 'shop' ) ) ) . '" class="waves-effect waves-light btn">' . apply_filters( 'shop_isle_see_all_products_label', __( 'See all products', 'shop-isle' ) ) . '</a>';
 		} elseif ( function_exists( 'woocommerce_get_page_id' ) ) {
-			echo '<a href="' . esc_url( get_permalink( woocommerce_get_page_id( 'shop' ) ) ) . '" class="btn btn-b btn-round">' . apply_filters( 'shop_isle_see_all_products_label', __( 'See all products', 'shop-isle' ) ) . '</a>';
+			echo '<a href="' . esc_url( get_permalink( woocommerce_get_page_id( 'shop' ) ) ) . '" class="waves-effect waves-light btn">' . apply_filters( 'shop_isle_see_all_products_label', __( 'See all products', 'shop-isle' ) ) . '</a>';
 		}
 		echo '</div>';
 		echo '</div>';
