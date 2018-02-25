@@ -13,9 +13,37 @@
   --materialize-color: #111;
 }
 
+/* Older browsers */
 html,
 body {
-  font-size: 100%;
+  font-size: 16px;
+}
+
+/* Modern browsers only need this one */
+
+@media screen and (min-width: 25em) {
+  html,
+  body {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+/* Safari <8 and IE <11 */
+@media screen and (min-width: 25em) {
+  html,
+  body {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+@media screen and (min-width: 50em) {
+  html,
+  body {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+html,
+body {
   background-color: var(--main-bg-color);
   font-family: "Roboto", sans-serif;
 }
@@ -30,12 +58,26 @@ h1,
 
 h1,
 .site-title {
-  font-size: 1.8em;
+  font-size: 1.6rem;
   margin: 0;
 }
 
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
 .copyright {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .flex-container {
@@ -60,6 +102,14 @@ select {
 nav,
 .page-footer {
   background-color: var(--component-bg-color);
+}
+
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--main-bg-color);
+  }
 }
 
 .banner {
@@ -102,7 +152,7 @@ nav,
 .page-footer {
   a {
     color: var(--main-bg-color);
-    font-size: 0.9em;
+    font-size: 0.9rem;
 
     &:hover {
       opacity: 0.8;
@@ -135,6 +185,8 @@ nav,
       li {
         padding-left: 30px;
         padding-right: 30px;
+        padding-top: 5px;
+        font-size: 0.8rem;
       }
     }
   }
@@ -329,6 +381,20 @@ nav {
 
   .module-title {
     color: var(--materialize-color);
+  }
+}
+
+.btn {
+  padding: 0 2rem;
+  border-radius: 2px;
+  font-family: Roboto, sans-serif;
+  border: 1px solid var(--component-bg-color);
+  color: var(--main-bg-color);
+  background-color: var(--component-bg-color);
+
+  &:hover {
+    color: var(--component-bg-color);
+    background-color: var(--main-bg-color);
   }
 }
 

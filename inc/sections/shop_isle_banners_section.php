@@ -49,15 +49,21 @@ if ( isset( $shop_isle_banners_hide ) && $shop_isle_banners_hide != 1 ) :
 
 					if ( ! empty( $shop_isle_banners_title ) ) {
 						echo '<div class="row">';
-						echo '<div class="col s6 offset-s3">';
-						echo '<h2 class="module-title font-alt product-banners-title">' . $shop_isle_banners_title . '</h2>';
+						echo '<div class="col col s12">';
+						echo '<h2 class="product-banners-title center-align">' . $shop_isle_banners_title . '</h2>';
 						echo '</div>';
 						echo '</div>';
 
 					} elseif ( is_customize_preview() ) {
 						echo '<div class="row">';
-						echo '<div class="col s6 m4 offset-s3">';
-						echo '<h2 class="module-title font-alt product-banners-title shop_isle_hidden_if_not_customizer"></h2>';
+						echo '<div class="col s12">';
+						echo '<h2 class="product-banners-title center-align shop_isle_hidden_if_not_customizer"></h2>';
+						echo '</div>';
+						echo '</div>';
+					} else {
+						echo '<div class="row">';
+						echo '<div class="col s12">';
+						echo '<h2 class="product-banners-title center-align shop_isle_hidden_if_not_customizer">En ce moment en promotion !</h2>';
 						echo '</div>';
 						echo '</div>';
 					}

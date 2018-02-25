@@ -47,7 +47,9 @@ require_once( $latest_products );
 /******* Video Section */
 $video = get_stylesheet_directory() . '/inc/sections/shop_isle_video_section.php';
 require_once( $video );
-
+?>
+<hr>
+<?php
 /******* Products Slider Section */
 $products_slider = get_stylesheet_directory() . '/inc/sections/shop_isle_products_slider_section.php';
 require_once( $products_slider );
