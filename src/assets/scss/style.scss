@@ -16,7 +16,7 @@
 /* Older browsers */
 html,
 body {
-  font-size: 16px;
+  font-size: 100%;
 }
 
 /* Modern browsers only need this one */
@@ -24,21 +24,14 @@ body {
 @media screen and (min-width: 25em) {
   html,
   body {
-    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    font-size: calc(80% + 4 * (100vw - 320px) / 320);
   }
 }
 
-/* Safari <8 and IE <11 */
-@media screen and (min-width: 25em) {
-  html,
-  body {
-    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
-  }
-}
 @media screen and (min-width: 50em) {
   html,
   body {
-    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    font-size: calc(50% + 4 * (100vw - 320px) / 320);
   }
 }
 
@@ -64,6 +57,7 @@ h1,
 
 h2 {
   font-size: 1.4rem;
+  margin-top: 0;
 }
 
 h3 {
@@ -353,6 +347,12 @@ nav {
   }
 }
 
+@media screen and (max-width: 601px) {
+  .btn-floating.halfway-fab {
+    top: -20px;
+  }
+}
+
 /**
    * END OVERRIDE MATERIALIZE
    **/
@@ -408,6 +408,14 @@ des titres */
 
 .module-small {
   padding: 0;
+
+  &.home-banners {
+    padding: 0;
+  }
+}
+
+.home-product-slider {
+  padding: 20px 0 20px;
 }
 
 .woocommerce-breadcrumb {

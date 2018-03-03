@@ -32,7 +32,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 
 if ( ! empty( $shop_isle_products_slider_title ) || ! empty( $shop_isle_products_slider_subtitle ) ) :
 	echo '<div class="row">';
-	echo '<div class="col s6 offset-s3">';
+	echo '<div class="col s12">';
 	if ( ! empty( $shop_isle_products_slider_title ) ) :
 		echo '<h2 class="module-title font-alt home-prod-title">' . $shop_isle_products_slider_title . '</h2>';
 	endif;

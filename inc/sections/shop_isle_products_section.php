@@ -25,14 +25,14 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 
 if ( ! empty( $shop_isle_products_title ) ) :
 	echo '<div class="row">';
-	echo '<div class="col s6 offset-s3">';
-	echo '<h2 class="product-hide-title">' . $shop_isle_products_title . '</h2>';
+	echo '<div class="col s12">';
+	echo '<h2 class="product-hide-title align-center">' . $shop_isle_products_title . '</h2>';
 	echo '</div>';
 	echo '</div>';
 else :
 	echo '<div class="row">';
-	echo '<div class="col s6 offset-s3">';
-	echo '<h2 class="product-hide-title">Nos dernières créations</h2>';
+	echo '<div class="col s12">';
+	echo '<h2 class="product-hide-title align-center">Nos dernières créations</h2>';
 	echo '</div>';
 	echo '</div>';
 endif;

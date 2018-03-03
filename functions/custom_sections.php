@@ -42,7 +42,7 @@ function woocommerce_breadcrumb( $args = array() ) {
 function shop_isle_shop_page_wrapper() {
     ?>
     <section class="module-small module-small-shop">
-            <div class="container">
+            <div class="container row">
 
             <?php
             if ( is_shop() || is_product_tag() || is_product_category() ) :
@@ -52,9 +52,10 @@ function shop_isle_shop_page_wrapper() {
                 if ( is_active_sidebar( 'shop-isle-sidebar-shop-archive' ) ) :
                 ?>
 
-                        <div class="col s9" id="shop-isle-blog-container">
-
-                    <?php endif; ?>
+                    <div class="col s9" id="shop-isle-blog-container">
+                <?php else : ?>
+                    <div class="col s12" id="shop-isle-blog-container">
+                <?php endif; ?>
 
             <?php endif; ?>
 
