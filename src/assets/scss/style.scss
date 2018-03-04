@@ -347,6 +347,10 @@ nav {
   }
 }
 
+.btn-floating i {
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 601px) {
   .btn-floating.halfway-fab {
     top: -20px;
@@ -421,6 +425,11 @@ des titres */
 .woocommerce-breadcrumb {
   height: 34px;
   max-height: 34px;
+}
+
+.custom-logo-link {
+  line-height: 1;
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 767px) {
