@@ -22,14 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-var_dump($product); die;
+//var_dump($product); die;
 
 // Ensure visibility
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php post_class(); ?>>
+<li class="col s12 m6 l4 xl3" <?php post_class(); ?>>
+	<div class="card">
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.
@@ -69,4 +70,5 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
+	</div>
 </li>

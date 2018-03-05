@@ -15,8 +15,6 @@ function my_theme_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 
-    // wp_enqueue_script('jquery-3', 'https://code.jquery.com/jquery-3.2.1.min.js');
-    // wp_enqueue_script('jquery-migrate-3', 'https://code.jquery.com/jquery-migrate-3.0.1.min.js');
     wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/aef257fb83.js', array(), false, true);
     wp_enqueue_script('materialize-script', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js', array(), false, true);
     wp_enqueue_script( 'hana-script',
@@ -35,10 +33,10 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
  * so that it is after the script was enqueued.
  */
 function my_site_WI_dequeue_script() {
-    wp_deregister_script( 'jquery' ); //jQuery 1.12, no thanks!
+    wp_deregister_script( 'shop-isle-navigation' ); // we need to customize this
 }
 
-// add_action( 'wp_print_scripts', 'my_site_WI_dequeue_script', 100 );
+add_action( 'wp_print_scripts', 'my_site_WI_dequeue_script', 100 );
 //
 /**
  * Dequeue the Bootstrap CSS.

@@ -16,4 +16,4 @@
  * @version     3.3.0
  */
 ?>
-<ul class="testou products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+<ul class="row products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">

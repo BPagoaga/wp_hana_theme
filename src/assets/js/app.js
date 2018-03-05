@@ -1,5 +1,6 @@
 import { logo, banner } from "./images";
 import { nav } from "./nav";
+import { navigation } from "./navigation";
 const $ = jQuery;
 
 // navigation
@@ -21,4 +22,5 @@ function hideTopNav(e) {
 if (window.innerWidth <= 768) {
   // init mobile nav
   $(".button-collapse").sideNav();
+  nav.mobile.init();
 }
