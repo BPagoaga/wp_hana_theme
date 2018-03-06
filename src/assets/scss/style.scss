@@ -7,6 +7,20 @@
   font-style: normal;
 }
 
+%button {
+  padding: 0 2rem;
+  border-radius: 2px;
+  font-family: Roboto, sans-serif;
+  border: 1px solid var(--component-bg-color);
+  color: var(--main-bg-color);
+  background-color: var(--component-bg-color);
+}
+
+%button__hover {
+  color: var(--component-bg-color);
+  background-color: var(--main-bg-color);
+}
+
 :root {
   --main-bg-color: #faebda;
   --component-bg-color: #f45520;
@@ -68,6 +82,12 @@ h4,
 h5,
 h6 {
   font-size: 1rem;
+}
+
+figure {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
 }
 
 .copyright {
@@ -440,4 +460,67 @@ des titres */
 
 /**
  *  END OVERRIDE SHOP ISLE
+ **/
+
+/**
+ *  OVERRIDE WOOCOMMERCE
+ **/
+
+.woocommerce-product-gallery {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.variations_form.cart {
+  padding: 10px 0;
+}
+
+td {
+  vertical-align: middle;
+}
+
+body.single-product div.product table.variations td.value, 
+body.single-product div.product table.variations th {
+  display: flex;
+}
+
+body.single-product div.product table.variations a.reset_variations {
+  padding: 0 5px;
+  border: 1px solid var(--component-bg-color);
+  color: var(--main-bg-color);
+  background-color: var(--component-bg-color);
+
+  &:hover {
+    color: var(--component-bg-color);
+    background-color: var(--main-bg-color);
+  }
+}
+
+body {
+  .input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea {
+    height: auto;
+  }
+}
+
+body .single_add_to_cart_button {
+  @extend %button;
+
+  &::before {
+    content: none;
+  }
+}
+
+body.single-product div.product form.cart .button:hover {
+  @extend %button;
+}
+
+
+/**
+ *  END OVERRIDE WOOCOMMERCE
  **/
