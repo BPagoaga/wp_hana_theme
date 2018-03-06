@@ -8,7 +8,6 @@
 }
 
 %button {
-  padding: 0 2rem;
   border-radius: 2px;
   font-family: Roboto, sans-serif;
   border: 1px solid var(--component-bg-color);
@@ -84,9 +83,14 @@ h6 {
   font-size: 1rem;
 }
 
+p {
+  font-size: 1rem;
+}
+
 figure {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
-  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
   border-radius: 2px;
 }
 
@@ -438,6 +442,10 @@ des titres */
   }
 }
 
+.module-super-small {
+  padding-top: 20px;
+}
+
 .home-product-slider {
   padding: 20px 0 20px;
 }
@@ -445,11 +453,30 @@ des titres */
 .woocommerce-breadcrumb {
   height: 34px;
   max-height: 34px;
+  color: var(--component-bg-color);
+  background-color: var(--main-bg-color);
+
+  a {
+    color: var(--component-bg-color);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .custom-logo-link {
   line-height: 1;
   font-size: 0.8rem;
+}
+
+.module-small-bottom {
+  padding: 20px 0;
+}
+
+.module-title,
+.module-subtitle {
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 767px) {
@@ -485,9 +512,13 @@ td {
   vertical-align: middle;
 }
 
-body.single-product div.product table.variations td.value, 
-body.single-product div.product table.variations th {
+body.single-product div.product table.variations td.value,
+body.single-product div.product table.variations tr {
   display: flex;
+}
+
+body.single-product div.product table.variations td.label {
+  width: 30%;
 }
 
 body.single-product div.product table.variations a.reset_variations {
@@ -495,6 +526,7 @@ body.single-product div.product table.variations a.reset_variations {
   border: 1px solid var(--component-bg-color);
   color: var(--main-bg-color);
   background-color: var(--component-bg-color);
+  font-size: 0.8rem;
 
   &:hover {
     color: var(--component-bg-color);
@@ -503,13 +535,26 @@ body.single-product div.product table.variations a.reset_variations {
 }
 
 body {
-  .input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea {
-    height: auto;
+  .input:not([type]),
+  input[type="text"]:not(.browser-default),
+  input[type="password"]:not(.browser-default),
+  input[type="email"]:not(.browser-default),
+  input[type="url"]:not(.browser-default),
+  input[type="time"]:not(.browser-default),
+  input[type="date"]:not(.browser-default),
+  input[type="datetime"]:not(.browser-default),
+  input[type="datetime-local"]:not(.browser-default),
+  input[type="tel"]:not(.browser-default),
+  input[type="number"]:not(.browser-default),
+  input[type="search"]:not(.browser-default),
+  textarea.materialize-textarea {
+    height: 100%;
   }
 }
 
 body .single_add_to_cart_button {
   @extend %button;
+  padding: 10px;
 
   &::before {
     content: none;
@@ -517,9 +562,56 @@ body .single_add_to_cart_button {
 }
 
 body.single-product div.product form.cart .button:hover {
-  @extend %button;
+  @extend %button__hover;
 }
 
+body.single-product div.product .summary,
+body.single-product div.product .images {
+  margin-bottom: 10px;
+}
+
+.woocommerce-product-details__short-description {
+  font-size: 1rem;
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.product {
+  .woocommerce-tabs .panel h2 {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .woocommerce-tabs {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.woocommerce-tabs ul.tabs {
+  font-size: 0.8rem;
+}
+
+.woocommerce-variation-add-to-cart {
+  display: flex;
+
+  input.qty {
+    height: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.product_meta {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.shop_attributes {
+  font-size: 0.8rem;
+}
 
 /**
  *  END OVERRIDE WOOCOMMERCE
