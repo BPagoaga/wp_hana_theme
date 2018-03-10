@@ -10,6 +10,16 @@
                 )
             );
             ?>
+
+            <?php if ( function_exists( 'WC' ) ) : ?>
+                <div class="navbar-cart-inner">
+                    <a href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'shop-isle' ); ?>" class="cart-contents">
+                        <span class="icon-basket"></span>
+                        <span class="cart-item-number"><?php echo esc_html( trim( WC()->cart->get_cart_contents_count() ) ); ?></span>
+                    </a>
+                    <?php apply_filters( 'shop_isle_cart_icon', '' ); ?>
+                </div>
+            <?php endif; ?>
     </div>
 </nav>
 <?php include '_menu_categories.php'; ?>
