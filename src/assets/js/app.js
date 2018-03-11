@@ -11,6 +11,13 @@ const topNavHeight = topNav.scrollHeight;
 // hide topnav on scroll
 window.addEventListener("scroll", hideTopNav);
 
+$("#menu-desktop-secondary-menu li.cart a").append(
+  $("#secondary-desktop-cart-number")
+);
+$("#menu-mobile-primary-menu li.cart a").append(
+  $("#primary-mobile-cart-number")
+);
+
 function hideTopNav(e) {
   if (window.scrollY > topNavHeight) {
     topNav.classList.add("hidden");

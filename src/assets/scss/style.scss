@@ -20,6 +20,12 @@
   background-color: var(--main-bg-color);
 }
 
+%flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 :root {
   --main-bg-color: #faebda;
   --component-bg-color: #f45520;
@@ -170,7 +176,7 @@ a {
 .page-footer {
   a {
     color: var(--main-bg-color);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 
     &:hover {
       opacity: 0.8;
@@ -178,9 +184,7 @@ a {
   }
 
   .footer-copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex_center;
     flex-wrap: wrap;
     margin-bottom: 0;
     padding: 0;
@@ -276,6 +280,10 @@ a {
       display: flex;
       align-items: center;
     }
+
+    .material-icons {
+      margin-right: 10px;
+    }
   }
 
   /**
@@ -324,9 +332,7 @@ a {
 
 .tabs .fa {
   font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex_center;
 }
 
 .hide-on-scroll {
@@ -479,6 +485,12 @@ des titres */
   margin-bottom: 40px;
 }
 
+.cat-item {
+  &::before {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .widget {
     margin-bottom: 0;
@@ -615,6 +627,34 @@ body.single-product div.product .images {
 
 .ex-product {
   padding: 10px;
+}
+
+.menu-item {
+  position: relative;
+  @extend %flex_center;
+
+  .cart-item-number {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    @extend %flex_center;
+    font-size: 0.7rem;
+
+    &.btn-floating.btn-large {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      color: var(--component-bg-color);
+      background-color: var(--main-bg-color);
+      border: 1px solid var(--component-bg-color);
+
+      &:hover {
+        color: var(--main-bg-color);
+        background-color: var(--component-bg-color);
+        border: 1px solid var(--main-bg-color);
+      }
+    }
+  }
 }
 
 /**
