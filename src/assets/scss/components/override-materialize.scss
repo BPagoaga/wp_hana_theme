@@ -1,0 +1,105 @@
+.circle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tab {
+  flex: 1;
+}
+
+.tabs .fa {
+  font-size: 20px;
+  @extend %flex_center;
+}
+
+.hide-on-scroll {
+  transition: all ease 0.3s;
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.hide-on-scroll.hidden {
+  transform: translateY(-100%);
+}
+
+.hide-on-scroll.hidden .flex-container {
+  opacity: 0;
+}
+
+.page-footer {
+  padding: 0;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  opacity: 1;
+}
+
+.tabs .tab a {
+  color: var(--component-bg-color);
+  opacity: 0.8;
+}
+
+nav {
+  height: auto;
+  ul {
+    a {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: var(--main-bg-color);
+        color: var(--component-bg-color);
+      }
+    }
+  }
+}
+
+.btn-floating i {
+  font-size: 1rem;
+}
+
+.collection {
+  border: none;
+
+  .collection-item {
+    background-color: var(--main-bg-color);
+    color: var(--component-bg-color);
+    border-bottom-color: var(--component-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.avatar i.circle {
+      background-color: var(--component-bg-color);
+    }
+
+    a {
+      color: var(--component-bg-color);
+
+      :hover {
+        color: var(--component-bg-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .btn-floating.halfway-fab {
+    top: -20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .material-icons {
+    margin-right: 10px;
+  }
+
+  .collection {
+    border-top: 1px solid var(--component-bg-color);
+    border-bottom: 1px solid var(--component-bg-color);
+
+    .collection-item {
+      border-bottom: none;
+    }
+  }
+}

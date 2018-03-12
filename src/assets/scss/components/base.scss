@@ -1,0 +1,282 @@
+:root {
+  --main-bg-color: #faebda;
+  --component-bg-color: #f45520;
+  --materialize-color: #111;
+}
+
+/* Older browsers */
+html,
+body {
+  font-size: 100%;
+}
+
+/* Modern browsers only need this one */
+
+@media screen and (min-width: 25em) {
+  html,
+  body {
+    font-size: calc(80% + 4 * (100vw - 320px) / 320);
+  }
+}
+
+@media screen and (min-width: 50em) {
+  html,
+  body {
+    font-size: calc(50% + 4 * (100vw - 320px) / 320);
+  }
+}
+
+html,
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+.site-title,
+.copyright {
+  font-family: "hitch_hikeregular";
+  flex: 1;
+  text-align: center;
+}
+
+h1,
+.site-title {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+figure {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  border-radius: 2px;
+}
+
+.copyright {
+  font-size: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none !important;
+}
+
+h1,
+footer {
+  text-align: center;
+}
+
+select {
+  display: block;
+}
+
+nav,
+.page-footer {
+  background-color: var(--component-bg-color);
+}
+
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--main-bg-color);
+  }
+}
+
+.banner {
+  margin-top: 48px;
+}
+
+//
+// Sous Menu
+//
+.sous-menu {
+  list-style: none;
+  display: flex;
+  height: auto;
+  background-color: var(--main-bg-color);
+  transition: all ease-in-out 0.5s;
+
+  .widget ul li {
+    a {
+      color: var(--component-bg-color);
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+/**
+   *   PRODUITS
+   **/
+.product_front_page,
+.product_catalog {
+  display: flex;
+}
+
+/**
+   *   FOOTER
+   **/
+
+.page-footer {
+  a {
+    color: var(--main-bg-color);
+    font-size: 0.8rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .footer-copyright {
+    @extend %flex_center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding: 0;
+
+    &:first-child {
+      order: 2;
+    }
+  }
+
+  .footer-sidebar-wrap {
+    padding: 10px 0;
+  }
+
+  .menu-footer-container {
+    .menu {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      li {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// @TODO : grid template
+
+/**
+ *   SMARTPHONE
+ **/
+@media screen and (max-width: 768px) {
+  .product_front_page,
+  .product_catalog {
+    flex-direction: row;
+
+    .card-image {
+      order: 2;
+      flex-grow: 2;
+    }
+
+    .card-content {
+      padding: 10px;
+      text-align: center;
+
+      h4 {
+        margin: 0;
+
+        &.card-title {
+          line-height: 16px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+/**
+   *   DESKTOP
+   **/
+
+@media screen and (min-width: 769px) {
+  h1,
+  .site-title {
+    text-align: left;
+  }
+
+  figure {
+    max-width: 64px;
+    margin: 0;
+    margin-right: 10px;
+    display: flex;
+  }
+
+  figure img {
+    width: 100%;
+  }
+
+  .flex-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  #nav-desktop {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  /**
+    *   PRODUITS
+    **/
+  .product_front_page,
+  .product_catalog {
+    flex-direction: column;
+
+    .card-image {
+      order: 1;
+      flex-grow: 1;
+    }
+
+    .card-content {
+      order: 2;
+    }
+  }
+
+  .footer-copyright {
+    &:first-child {
+      order: 1;
+    }
+  }
+
+  .nav-wrapper {
+    display: flex;
+  }
+}

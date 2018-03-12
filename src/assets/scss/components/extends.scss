@@ -1,0 +1,18 @@
+%button {
+  border-radius: 2px;
+  font-family: Roboto, sans-serif;
+  border: 1px solid var(--component-bg-color);
+  color: var(--main-bg-color);
+  background-color: var(--component-bg-color);
+}
+
+%button__hover {
+  color: var(--component-bg-color);
+  background-color: var(--main-bg-color);
+}
+
+%flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

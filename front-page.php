@@ -10,9 +10,9 @@
 get_header();
 /* Wrapper start */
 
-echo '<div class="main toto">';
+echo '<div class="main front-page">';
 $big_title = get_stylesheet_directory() . '/inc/sections/shop_isle_big_title_section.php';
-//load_template( apply_filters( 'shop-isle-subheader', $big_title ) );
+// load_template( apply_filters( 'shop-isle-subheader', $big_title ) );
 
 /* Wrapper start */
 $shop_isle_bg = get_theme_mod( 'background_color' );
@@ -48,7 +48,39 @@ require_once( $latest_products );
 $video = get_stylesheet_directory() . '/inc/sections/shop_isle_video_section.php';
 require_once( $video );
 ?>
-<hr>
+
+
+<!-- réassurance -->
+<div class="container">
+    <!-- <div class="divider"></div> -->
+    <div class="row">
+        <section class="col s12">
+            <ul class="collection">
+            <li class="collection-item avatar col s12 m4">
+                    <i class="material-icons circle">local_shipping</i>
+
+                <p>Livraison sous 5 jours
+                </p>
+            </li>
+            <li class="collection-item avatar col s12 m4">
+
+                <i class="material-icons circle">verified_user</i>
+                <p>Paiement Sécurisé
+                </p>
+            </li>
+            <li class="collection-item avatar col s12 m4">
+
+                <i class="material-icons circle">build</i>
+                <a href="#">Service Client
+                </a>
+            </li>
+        </ul>
+        </section>
+
+    </div>
+</div>
+<!-- réassurance -->
+
 <?php
 /******* Products Slider Section */
 $products_slider = get_stylesheet_directory() . '/inc/sections/shop_isle_products_slider_section.php';

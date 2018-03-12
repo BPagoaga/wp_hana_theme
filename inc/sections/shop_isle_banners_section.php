@@ -6,11 +6,11 @@
  * @subpackage Shop Isle
  */
 
-		/* BANNERS */
+/* BANNERS */
 
 
-		$shop_isle_banners_hide  = get_theme_mod( 'shop_isle_banners_hide' );
-		$shop_isle_banners_title = get_theme_mod( 'shop_isle_banners_title' );
+$shop_isle_banners_hide  = get_theme_mod( 'shop_isle_banners_hide' );
+$shop_isle_banners_title = get_theme_mod( 'shop_isle_banners_title' );
 
 if ( isset( $shop_isle_banners_hide ) && $shop_isle_banners_hide != 1 ) :
 	echo '<section class="module-small home-banners">';
@@ -68,7 +68,7 @@ if ( isset( $shop_isle_banners_hide ) && $shop_isle_banners_hide != 1 ) :
 						echo '</div>';
 					}
 
-						echo '<div class="row shop_isle_bannerss_section">';
+						echo '<div class="shop_isle_bannerss_section"><div class="carousel carousel-slider">';
 
 					foreach ( $shop_isle_banners_decoded as $shop_isle_banner ) :
 
@@ -83,19 +83,19 @@ if ( isset( $shop_isle_banners_hide ) && $shop_isle_banners_hide != 1 ) :
 								$shop_isle_alt_image = 'alt="' . esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) . '"';
 							}
 
-							echo '<div class="col s6"><div class="content-box mt-0 mb-0"><div class="content-box-image">';
+							echo '<div class="carousel-item">';
 
 							if ( ! empty( $link ) ) {
 								echo '<a href="' . esc_url( $link ) . '"><img src="' . esc_url( $image_url ) . '" ' . $shop_isle_alt_image . '></a>';
 							} else {
 								echo '<a><img src="' . esc_url( $image_url ) . '"></a>';
 							}
-							echo '</div></div></div>';
+							echo '</div>';
 
 						}
 						endforeach;
 
-						echo '</div>';
+						echo '</div></div>';
 
 					echo '</div>';
 				endif;

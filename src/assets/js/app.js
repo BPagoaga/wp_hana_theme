@@ -10,6 +10,10 @@ const topNav = document.querySelector(".hide-on-scroll");
 const topNavHeight = topNav.scrollHeight;
 // hide topnav on scroll
 window.addEventListener("scroll", hideTopNav);
+$(".carousel.carousel-slider").carousel({
+  fullWidth: true,
+  indicators: true
+});
 
 $("#menu-desktop-secondary-menu li.cart a").append(
   $("#secondary-desktop-cart-number")
