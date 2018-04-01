@@ -58,6 +58,13 @@ nav {
   font-size: 1rem;
 }
 
+.btn:focus,
+.btn-large:focus,
+.btn-floating:focus {
+  color: var(--component-bg-color);
+  background-color: var(--main-bg-color);
+}
+
 .collection {
   border: none;
 
@@ -81,6 +88,10 @@ nav {
       }
     }
   }
+}
+
+.side-nav li > a {
+  width: 100%;
 }
 
 @media screen and (max-width: 601px) {

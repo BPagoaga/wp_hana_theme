@@ -8,8 +8,8 @@
 ?>
 		<section class="module">
 			<div class="container">
-Page de contact
 				<div class="row">
+					<p class="col s12">Page de contact</p>
 					<?php
 						$shop_isle_contact_page_form_shortcode = get_theme_mod( 'shop_isle_contact_page_form_shortcode' );
 
@@ -18,7 +18,7 @@ Page de contact
 
 					if ( $is_shotcode ) {
 
-						echo '<div class="col-xs-12  ' . ( $is_content ? 'col-sm-6' : 'col-sm-12' ) . ' contact-page-form">';
+						echo '<div class="col s12  ' . ( $is_content ? 'm6' : 'm12' ) . ' contact-page-form">';
 
 						echo do_shortcode( $shop_isle_contact_page_form_shortcode );
 

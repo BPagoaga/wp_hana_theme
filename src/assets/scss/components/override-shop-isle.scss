@@ -24,16 +24,10 @@
 }
 
 .btn {
-  padding: 0 2rem;
-  border-radius: 2px;
-  font-family: Roboto, sans-serif;
-  border: 1px solid var(--component-bg-color);
-  color: var(--main-bg-color);
-  background-color: var(--component-bg-color);
+  @extend %button;
 
   &:hover {
-    color: var(--component-bg-color);
-    background-color: var(--main-bg-color);
+    @extend %button_hover;
   }
 }
 
