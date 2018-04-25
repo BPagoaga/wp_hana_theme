@@ -112,6 +112,7 @@ body.single-product div.product .images {
 .product_meta {
   display: flex;
   justify-content: space-evenly;
+  font-size: 0.8rem;
 }
 
 .shop_attributes {
@@ -120,6 +121,32 @@ body.single-product div.product .images {
 
 .ex-product {
   padding: 10px;
+}
+
+.single-product .product_title {
+  font-size: 1.4rem;
+}
+
+body.single-product div.product .images {
+  flex: 1;
+}
+
+body.single-product div.product .summary {
+  flex: 2;
+}
+
+.product .woocommerce-tabs {
+  width: 100%;
+}
+
+.woocommerce-product-gallery__image--placeholder {
+  line-height: 0;
+  flex: 1 1 auto;
+}
+
+.product.type-product {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .menu-item {

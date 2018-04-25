@@ -27,7 +27,7 @@
   @extend %button;
 
   &:hover {
-    @extend %button_hover;
+    @extend %button__hover;
   }
 }
 

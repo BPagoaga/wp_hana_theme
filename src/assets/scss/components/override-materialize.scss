@@ -2,6 +2,9 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.btn {
+  line-height: inherit;
+}
 
 .tab {
   flex: 1;
@@ -44,6 +47,8 @@ nav {
   height: auto;
   ul {
     a {
+      font-size: 0.9rem;
+
       &:hover,
       &:focus,
       &:active {

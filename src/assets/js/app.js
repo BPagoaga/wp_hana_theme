@@ -2,10 +2,15 @@ import { logo, banner } from "./images";
 import { nav } from "./nav";
 import { navigation } from "./navigation";
 import { wc_custom } from "./wc_custom";
+import { cart } from "./cart";
+
 const $ = jQuery;
 
 // navigation
 nav.init();
+
+// ajout au panier
+cart.init();
 
 // customization
 wc_custom.init();

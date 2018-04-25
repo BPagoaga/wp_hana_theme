@@ -78,7 +78,10 @@
         <!-- secondary mobile -->
         <?php include 'inc/structure/nav/_secondary_mobile.php'; ?>
         <div class="container">
-            <img src="<?= get_stylesheet_directory_uri() . '/dist/banniere-Hana-test-2.png' ?>" class="responsive-img banner">
+            <figure class="no-shadow">
+
+                <img src="<?= get_stylesheet_directory_uri() . '/dist/banniere-Hana-test-2.png' ?>" class="responsive-img banner">
+            </figure>
             <!-- Navigation principale -->
             <?php include 'inc/structure/nav/_primary_desktop.php'; ?>
 
