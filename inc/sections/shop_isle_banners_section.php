@@ -102,6 +102,4 @@ if ( isset( $shop_isle_banners_hide ) && $shop_isle_banners_hide != 1 ) :
 			endif;
 			echo '</section>';
 
-			echo '<hr class="divider-w">';
-
 endif;  /* END BANNERS */

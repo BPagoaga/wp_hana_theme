@@ -144,6 +144,10 @@ body.single-product div.product .summary {
   flex: 1 1 auto;
 }
 
+.woocommerce-Price-amount {
+  display: none;
+}
+
 .product.type-product {
   display: flex;
   flex-wrap: wrap;

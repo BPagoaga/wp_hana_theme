@@ -329,9 +329,9 @@ else :
 			if ( function_exists( 'method_exists' ) && method_exists( $product, 'get_price_html' ) ) {
 				$shop_isle_price = $product->get_price_html();
 			}
-			if ( ! empty( $shop_isle_price ) ) {
-				echo wp_kses_post( $shop_isle_price );
-			}
+			// if ( ! empty( $shop_isle_price ) ) {
+			// 	echo wp_kses_post( $shop_isle_price );
+			// }
 			echo '</div>';
 			echo '</div>';
 
