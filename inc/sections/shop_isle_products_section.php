@@ -150,18 +150,18 @@ elseif ( isset( $shop_isle_products_category ) && ! empty( $shop_isle_products_c
 				endif;
 			endif;
 
-			echo '<div class="shop-item-detail card-content">';
-			if ( ! empty( $product ) ) :
-				echo do_shortcode( '[add_to_cart id="' . $shop_isle_latest_loop->post->ID . '"]' );
-				if ( function_exists( 'wccm_add_button' ) ) {
-					wccm_add_button();
-				}
-				if ( defined( 'YITH_WCQV' ) ) {
+			// echo '<div class="shop-item-detail card-content">';
+			// if ( ! empty( $product ) ) :
+			// 	echo do_shortcode( '[custom_add_to_cart id="' . $shop_isle_latest_loop->post->ID . '"]' );
+			// 	if ( function_exists( 'wccm_add_button' ) ) {
+			// 		wccm_add_button();
+			// 	}
+			// 	if ( defined( 'YITH_WCQV' ) ) {
 
-					echo '<a href="#" class="button yith-wcqv-button" data-product_id="' . esc_attr( get_the_ID() ) . '">' . __( 'Quick View', 'shop-isle' ) . '</a>';
+			// 		echo '<a href="#" class="button yith-wcqv-button" data-product_id="' . esc_attr( get_the_ID() ) . '">' . __( 'Quick View', 'shop-isle' ) . '</a>';
 
-				}
-			endif;
+			// 	}
+			// endif;
 			echo '<h4 class="shop-item-title font-alt card-title"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h4>';
 			echo '</div>';
 			echo '</div>';
@@ -282,7 +282,7 @@ else :
 			echo '<div class="card-content">';
 			echo '<h4 class="card-title"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h4>';
 			if ( ! empty( $product ) ) :
-				echo do_shortcode( '[add_to_cart id="' . $shop_isle_latest_loop->post->ID . '"]' );
+				echo do_shortcode( '[custom_add_to_cart id="' . $shop_isle_latest_loop->post->ID . '"]' );
 				if ( function_exists( 'wccm_add_button' ) ) {
 					wccm_add_button();
 				}
