@@ -28,7 +28,9 @@ body {
 
 html,
 body {
-  background-color: var(--main-bg-color);
+  background-blend-mode: multiply;
+  background: var(--main-bg-color) url("../images/sun-pattern-opa.png") repeat
+    scroll 0% 0%;
   font-family: "Roboto", sans-serif;
 }
 

@@ -33,8 +33,8 @@ let config = {
     // @TODO : mettre en place une fonction php qui mappera les hash à leur source
     // via le manifest
     // filename: dev ? "[name].js" : "[name].[chunkhash].js",
-    filename: "[name].js",
-    publicPath: "dist/"
+    filename: "[name].js"
+    //publicPath: "dist/"
   },
 
   resolve: {
