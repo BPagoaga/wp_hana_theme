@@ -22,7 +22,7 @@ const topNavHeight = topNav.scrollHeight;
 window.addEventListener("scroll", hideTopNav);
 window.addEventListener("resize", initMobileScripts);
 $(".carousel.carousel-slider").carousel({
-  fullWidth: true,
+  fullWidth: false,
   indicators: true
 });
 
