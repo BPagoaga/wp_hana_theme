@@ -109,6 +109,19 @@ a {
   }
 }
 
+button[type="submit"] {
+  @extend %button;
+
+  &:hover {
+    @extend %button__hover;
+  }
+}
+
+form {
+  @extend %flex_center;
+  flex-wrap: wrap;
+}
+
 .banner {
   margin-top: 48px;
 }
