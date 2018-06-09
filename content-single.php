@@ -7,7 +7,6 @@
  * @package WordPress
  * @subpackage Shop Isle
  */
-echo "single article";
 
 	/*
 	 * @hooked shop_isle_post_header - 10

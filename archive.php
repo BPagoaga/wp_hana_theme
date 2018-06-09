@@ -12,8 +12,6 @@
 
 <!-- Wrapper start -->
 <div class="main">
-    Page des archives
-
 	<!-- Header section start -->
 	<?php
 	$shop_isle_header_image = get_header_image();

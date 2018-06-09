@@ -53,6 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
 								</div>
 								<div class="input-field col s10 offset-s1">
+									<i class="material-icons prefix">lock_outline</i>
 									<input id="password" type="password" name="password" class="validate woocommerce-Input woocommerce-Input--text input-text">
 									<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
 								</div>
@@ -61,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<?php do_action( 'woocommerce_login_form' ); ?>
 
 							<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-							<div>
+							<div class="card-action">
 								<button class="btn waves-effect waves-light woocommerce-Button button" type="submit" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?>
 									<i class="material-icons right">send</i>
 								</button>
@@ -121,6 +122,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 								<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 								<div class="input-field col s10 offset-s1">
+									<i class="material-icons prefix">lock_outline</i>
 									<input id="reg_password" type="password" name="password" class="validate woocommerce-Input woocommerce-Input--text input-text">
 									<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
 								</div>
@@ -132,7 +134,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<?php do_action( 'woocommerce_register_form' ); ?>
 
 							<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-							<div>
+							<div class="card-action">
 								<button class="btn waves-effect waves-light woocommerce-Button button" type="submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?>
 									<i class="material-icons right">send</i>
 								</button>

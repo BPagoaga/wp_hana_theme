@@ -8,7 +8,6 @@
  * @subpackage Shop Isle
  */
 ?>
-Content page
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 

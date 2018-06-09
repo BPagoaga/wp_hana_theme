@@ -57,6 +57,10 @@ nav {
       }
     }
   }
+
+  & ~ .col .card {
+    margin-top: 0;
+  }
 }
 
 .btn-floating i {

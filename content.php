@@ -10,7 +10,6 @@
 ?>
 
 <div <?php post_class( 'post' ); ?> id="post-<?php the_ID(); ?>">
-CONTENT
 	<?php
 
 	/*
