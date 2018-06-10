@@ -1,6 +1,4 @@
 %button {
-  display: flex;
-  align-items: center;
   height: auto;
   border-radius: 2px;
   font-family: Roboto, sans-serif;
@@ -12,6 +10,16 @@
 %button__hover {
   color: var(--component-bg-color);
   background-color: var(--main-bg-color);
+}
+
+%button__block {
+  display: block;
+}
+
+%button__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 %flex_center {

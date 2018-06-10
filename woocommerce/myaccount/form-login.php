@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 							<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 							<div class="card-action">
-								<button class="btn waves-effect waves-light woocommerce-Button button" type="submit" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?>
+								<button class="btn btn__flex waves-effect waves-light woocommerce-Button button" type="submit" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?>
 									<i class="material-icons right">send</i>
 								</button>
 
@@ -135,7 +135,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 							<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
 							<div class="card-action">
-								<button class="btn waves-effect waves-light woocommerce-Button button" type="submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?>
+								<button class="btn btn__flex waves-effect waves-light woocommerce-Button button" type="submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?>
 									<i class="material-icons right">send</i>
 								</button>
 

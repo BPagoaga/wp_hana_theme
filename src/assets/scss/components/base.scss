@@ -1,9 +1,3 @@
-:root {
-  --main-bg-color: #faebda;
-  --component-bg-color: #f45520;
-  --materialize-color: #111;
-}
-
 /* Older browsers */
 html,
 body {
@@ -292,6 +286,21 @@ form {
 
     .card-content {
       order: 2;
+    }
+  }
+
+  .product {
+    .horizontal {
+      flex-wrap: wrap;
+    }
+
+    .card-stacked {
+      flex: 1;
+    }
+
+    .card-action {
+      padding: 0;
+      width: 100%;
     }
   }
 

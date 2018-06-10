@@ -40,7 +40,7 @@ wc_print_notices(); ?>
 				<?php do_action( 'woocommerce_lostpassword_form' ); ?>
 				<div class="card-action">
 					<input type="hidden" name="wc_reset_password" value="true" />
-					<button class="btn waves-effect waves-light woocommerce-Button button" type="submit" name="register" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>"><?php esc_html_e( 'Reset password', 'woocommerce' ); ?></button>
+					<button class="btn btn__flex waves-effect waves-light woocommerce-Button button" type="submit" name="register" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>"><?php esc_html_e( 'Reset password', 'woocommerce' ); ?></button>
 				</div>
 
 				<?php wp_nonce_field( 'lost_password' ); ?>

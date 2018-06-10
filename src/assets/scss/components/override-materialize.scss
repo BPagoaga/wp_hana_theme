@@ -99,8 +99,35 @@ nav {
   }
 }
 
+.card-action {
+  & > * {
+    margin: auto;
+  }
+}
+
 .side-nav li > a {
   width: 100%;
+}
+
+/**
+ * INPUT FIELDS COLORS
+ */
+
+/* label focus color */
+.input-field
+  input[type="text"]:not(.browser-default):focus:not([readonly])
+  + label {
+  color: var(--component-bg-color);
+}
+/* label underline focus color */
+.input-field input[type="text"]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid var(--component-bg-color);
+  box-shadow: 0 1px 0 0 var(--component-bg-color);
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: var(--component-bg-color);
 }
 
 //@TODO : overrider le css du carousel pour les height de .carousel et la min-height de .carousel-slider

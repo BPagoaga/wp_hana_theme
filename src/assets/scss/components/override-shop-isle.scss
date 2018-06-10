@@ -29,6 +29,10 @@
   &:hover {
     @extend %button__hover;
   }
+
+  &.btn__flex {
+    @extend %button__flex;
+  }
 }
 
 /* Ne pas afficher l'image en background
