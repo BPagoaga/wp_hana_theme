@@ -9,33 +9,45 @@
 		<section class="module">
 			<div class="container">
 				<div class="row">
-					<p class="col s12">Page de contact</p>
-					<?php
-						$shop_isle_contact_page_form_shortcode = get_theme_mod( 'shop_isle_contact_page_form_shortcode' );
 
-						$is_content  = $post->post_content !== '' ? true : false;
-						$is_shotcode = ! empty( $shop_isle_contact_page_form_shortcode ) ? true : false;
+				<?php
+					$shop_isle_contact_page_form_shortcode = get_theme_mod( 'shop_isle_contact_page_form_shortcode' );
 
-					if ( $is_shotcode ) {
+					$is_content  = $post->post_content !== '' ? true : false;
+					$is_shotcode = ! empty( $shop_isle_contact_page_form_shortcode ) ? true : false;
 
-						echo '<div class="col s12  ' . ( $is_content ? 'm6' : 'm12' ) . ' contact-page-form">';
+				if ( $is_shotcode ) {
 
-						echo do_shortcode( $shop_isle_contact_page_form_shortcode );
+					echo '<div class="col s12  ' . ( $is_content ? 'm6' : 'm12' ) . ' contact-page-form">'; ?>
 
-						echo '</div>';
+					<div class="card">
+						<div class="card-content center-align">
 
-					}
+					<?php echo do_shortcode( $shop_isle_contact_page_form_shortcode );?>
 
-					if ( $is_content ) {
+						</div>
+					</div>
 
-						echo '<div class="col-xs-12 ' . ( $is_shotcode ? 'col-sm-6' : 'col-sm-12' ) . '">';
+					<?php echo '</div>';
 
-						the_content();
+				}
 
-						echo '</div>';
-					}
+				if ( $is_content ) {
 
-					?>
+					echo '<div class="col s12 ' . ( $is_shotcode ? 'm6' : 'm12' ) . '">'; ?>
+
+					<div class="card">
+						<div class="card-content center-align">
+
+					<?php the_content();?>
+
+						</div>
+					</div>
+
+					<?php echo '</div>';
+				}
+
+				?>
 
 				</div><!-- .row -->
 
