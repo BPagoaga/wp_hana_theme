@@ -7,7 +7,6 @@
  * @package WordPress
  * @subpackage Shop Isle
  */
-
 	/*
 	 * @hooked shop_isle_post_header - 10
 	 * @hooked shop_isle_post_meta - 20

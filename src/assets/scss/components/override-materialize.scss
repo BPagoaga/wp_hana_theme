@@ -110,6 +110,13 @@ nav {
 }
 
 /**
+ * Box-sizing set à border-box pour les inputs type=search
+ */
+input[type="search"]:not(.browser-default) {
+  box-sizing: border-box;
+}
+
+/**
  * INPUT FIELDS COLORS
  */
 

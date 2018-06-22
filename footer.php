@@ -64,7 +64,7 @@
 
         </footer>
 
-    </div>
+    </main>
     <!-- Wrapper end -->
     <!-- Scroll-up -->
     <div class="scroll-up">

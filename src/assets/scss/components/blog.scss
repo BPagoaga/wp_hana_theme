@@ -1,0 +1,34 @@
+/*
+ * SINGLE POST
+ */
+
+.section-single-post {
+  padding-top: 50px;
+  background-color: var(--light-bg-color);
+
+  article {
+    padding: 10px;
+  }
+}
+
+/**
+ * LOOP
+ */
+#shop-isle-blog-container,
+.section-single-post {
+  a {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .material-icons {
+    font-size: 0.7rem;
+  }
+
+  .post-meta {
+    a {
+      color: var(--fade-text-color);
+    }
+  }
+}
