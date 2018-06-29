@@ -111,7 +111,7 @@ elseif ( isset( $shop_isle_products_category ) && ! empty( $shop_isle_products_c
 			<div class="card product_catalog">
 			<div class="card-image">
 			<!-- bind method add to cart to this link -->
-			<a id="add-to-cart" data-id="<?=$shop_isle_latest_loop->post->ID?>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+			<!-- <a id="add-to-cart" data-id="<?=$shop_isle_latest_loop->post->ID?>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a> -->
 			</div>
 			<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
 			</div>
@@ -243,6 +243,7 @@ else :
 			global $product;
 
 			echo '<div class="col s12 m6 l4 xl3">';
+			echo '<a href="' . esc_url( get_permalink() ) . '">';
 			echo '<div class="card product_front_page">';
 			echo '<div class="card-image">';
 
@@ -275,28 +276,29 @@ else :
 					echo '<img src="' . esc_url( wc_placeholder_img_src() ) . '" alt="Placeholder"/>';
 				endif;
 			endif;
-			echo '<a href="?add-to-cart='.$shop_isle_latest_loop->post->ID.'" id="add-to-cart" data-id="'.$shop_isle_latest_loop->post->ID.'" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>';
+			// echo '<a href="?add-to-cart='.$shop_isle_latest_loop->post->ID.'" id="add-to-cart" data-id="'.$shop_isle_latest_loop->post->ID.'" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>';
 			// end card-image
 			echo '</div>';
 
 			echo '<div class="card-content">';
-			echo '<h4 class="card-title"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h4>';
-			if ( ! empty( $product ) ) :
-				echo do_shortcode( '[custom_add_to_cart id="' . $shop_isle_latest_loop->post->ID . '"]' );
-				if ( function_exists( 'wccm_add_button' ) ) {
-					wccm_add_button();
-				}
-				if ( defined( 'YITH_WCQV' ) ) {
-					$label = esc_html( get_option( 'yith-wcqv-button-label' ) );
-					echo '<a class="button yith-wcqv-button" data-product_id="' . esc_attr( get_the_ID() ) . '">';
-					if ( ! empty( $label ) ) {
-						echo $label;
-					} else {
-						echo __( 'Quick View', 'shop-isle' );
-					}
-					echo '</a>';
-				}
-			endif;
+			echo '<h4 class="card-title">' . get_the_title() . '</h4>';
+			// if ( ! empty( $product ) ) :
+			// 	echo do_shortcode( '[custom_add_to_cart id="' . $shop_isle_latest_loop->post->ID . '"]' );
+			// 	if ( function_exists( 'wccm_add_button' ) ) {
+			// 		wccm_add_button();
+			// 	}
+			// 	// if ( defined( 'YITH_WCQV' ) ) {
+			// 	// 	$label = esc_html( get_option( 'yith-wcqv-button-label' ) );
+			// 	// 	echo '<a class="button yith-wcqv-button" data-product_id="' . esc_attr( get_the_ID() ) . '">';
+			// 	// 	if ( ! empty( $label ) ) {
+			// 	// 		echo $label;
+			// 	// 	} else {
+			// 	// 		echo __( 'Quick View', 'shop-isle' );
+			// 	// 	}
+			// 	// 	echo '</a>';
+			// 	// }
+			// endif;
+			// end card-content
 			echo '</div>';
 			$rating_html = '';
 			if ( function_exists( 'method_exists' ) && ( function_exists( 'wc_get_rating_html' ) ) && method_exists( $product, 'get_average_rating' ) ) {
@@ -332,7 +334,9 @@ else :
 			// if ( ! empty( $shop_isle_price ) ) {
 			// 	echo wp_kses_post( $shop_isle_price );
 			// }
+			// end product_front_page
 			echo '</div>';
+			echo '</a>';
 			echo '</div>';
 
 		endwhile;

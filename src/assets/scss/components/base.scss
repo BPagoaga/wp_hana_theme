@@ -23,8 +23,7 @@ body {
 html,
 body {
   background-blend-mode: multiply;
-  background: var(--main-bg-color) /* url("../images/sun-pattern-opa.png") */ repeat
-    scroll 0% 0%;
+  background: var(--main-bg-color) repeat scroll 0% 0%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -194,37 +193,6 @@ form {
   }
 }
 
-// @TODO : grid template
-
-/**
- *   SMARTPHONE
- **/
-@media screen and (max-width: 768px) {
-  .product_front_page,
-  .product_catalog {
-    flex-direction: row;
-
-    .card-image {
-      order: 2;
-      flex-grow: 2;
-    }
-
-    .card-content {
-      padding: 10px;
-      text-align: center;
-
-      h4 {
-        margin: 0;
-
-        &.card-title {
-          line-height: 16px;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-}
-
 /**
    *   DESKTOP
    **/
@@ -269,38 +237,6 @@ form {
     a {
       display: flex;
       align-items: center;
-    }
-  }
-
-  /**
-    *   PRODUITS
-    **/
-  .product_front_page,
-  .product_catalog {
-    flex-direction: column;
-
-    .card-image {
-      order: 1;
-      flex-grow: 1;
-    }
-
-    .card-content {
-      order: 2;
-    }
-  }
-
-  .product {
-    .horizontal {
-      flex-wrap: wrap;
-    }
-
-    .card-stacked {
-      flex: 1;
-    }
-
-    .card-action {
-      padding: 0;
-      width: 100%;
     }
   }
 

@@ -1,11 +1,12 @@
 @import "components/reset";
 @import "components/normalize";
+@import "components/override-materialize";
+@import "components/override-shop-isle";
+@import "components/override-woocommerce";
 @import "components/font";
 @import "components/colors";
 @import "components/extends";
 @import "components/base";
 @import "components/navigation";
 @import "components/blog";
-@import "components/override-materialize";
-@import "components/override-shop-isle";
-@import "components/override-woocommerce";
+@import "components/products";
