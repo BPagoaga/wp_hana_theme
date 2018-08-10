@@ -16,7 +16,7 @@
  */
 #shop-isle-blog-container,
 .section-single-post {
-  a {
+  a:not(.woocommerce-loop-product__link) {
     display: inline-flex;
     align-items: center;
     margin-right: 15px;

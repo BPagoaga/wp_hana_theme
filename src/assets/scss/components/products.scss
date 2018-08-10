@@ -37,7 +37,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 980px) {
+@media screen and (min-width: 768px) {
   .product_front_page,
   .product_catalog {
     flex-direction: column;
@@ -65,6 +65,17 @@
     .card-action {
       padding: 0;
       width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  .product_front_page,
+  .product_catalog {
+    .card-image {
+      order: 1;
+      flex: 1;
+      max-height: 230px;
     }
   }
 }
